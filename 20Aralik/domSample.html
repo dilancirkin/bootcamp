@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label>Number</label>
+        <input type="text" id="numberId">
+    </div>
+    <div>
+        <button onclick="write()">Write</button>
+    </div>
+
+    <script>
+        function write() {
+            var numberValue = document.getElementById("numberId").value;
+            
+            if (!isNaN(numberValue)) {
+                var sonuc = parseFloat(numberValue) * 1.8;
+                alert("Sonuç: " + sonuc);
+            } else {
+                alert("Değer geçersiz!");
+            }
+        }
+    </script>
+</body>
+</html>

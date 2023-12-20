@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="">Number1</label>
+        <input type="number" id="numberOne">
+    </div>
+    <div>
+        <label for="">Number2</label>
+        <input type="number" id="numberTwo">
+    </div>
+    <div>
+        <button onclick="carp()">Çarpma</button>
+        <button onclick="topla()">Toplama</button>
+    </div>
+     <div>
+        <button onclick="bol()">Bölme</button>
+        <button onclick="cikar()">Çıkarma</button>
+    </div>
+    <div>
+        <p id="sonuc"></p>
+    </div>
+</body>
+<script>
+        function carp(){
+            var numberOne = document.getElementById("numberOne").value
+            var numberTwo = document.getElementById("numberTwo").value
+
+            var sonuc = numberOne*numberTwo;
+
+            document.getElementById("sonuc").innerText = "Sonuç: " + sonuc.toFixed(5);;
+        }
+        function topla(){
+            var numberOne = document.getElementById("numberOne").value
+            var numberTwo = document.getElementById("numberTwo").value
+
+            var sonuc = parseFloat(numberOne)+parseFloat(numberTwo);
+
+            document.getElementById("sonuc").innerText = "Sonuç: " + sonuc.toFixed(5);;
+        }
+        function bol(){
+            var numberOne = document.getElementById("numberOne").value
+            var numberTwo = document.getElementById("numberTwo").value
+
+            var sonuc = numberOne/numberTwo;
+
+            document.getElementById("sonuc").innerText = "Sonuç: " + sonuc.toFixed(5);;
+        }
+        function cikar(){
+            var numberOne = document.getElementById("numberOne").value
+            var numberTwo = document.getElementById("numberTwo").value
+
+            var sonuc = numberOne-numberTwo;
+
+            document.getElementById("sonuc").innerText = "Sonuç: " + sonuc.toFixed(5);;
+        }
+</script>
+</html>
